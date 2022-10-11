@@ -6,7 +6,7 @@ import ProductCard from '../component/ProductCard';
 const ProductAll = () => {
   const navigate = useNavigate();
   const [query, setQuery] = useSearchParams();
-  let searchQuery = query.get('q');
+  let searchQuery = query.get('q') || '';
   const [productList, setProductList] = useState([]);
 
   const getProducts = async () => {
