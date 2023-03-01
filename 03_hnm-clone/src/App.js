@@ -1,11 +1,12 @@
+import logo from './logo.svg';
 import './App.css';
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, Link, useNavigate } from 'react-router-dom';
 import ProductAll from './page/ProductAll';
 import Login from './page/Login';
+import ProductDetail from './page/ProductDetail';
 import Navbar from './component/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect, useState } from 'react';
-import PrivateRoute from './route/PrivateRoute';
 
 function App() {
   //인증 state 변수가 true가 됐을 때
@@ -25,15 +26,9 @@ function App() {
     <div>
       <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} />
       <Routes>
-        <Route path="/" element={<ProductAll />} />
-        <Route
-          path="/login"
-          element={<Login setAuthenticate={setAuthenticate} />}
-        />
-        <Route
-          path="/product/:id"
-          element={<PrivateRoute authenticate={authenticate} />}
-        />
+        <Route path="/" element={<ProductAll authenticate={authenticate} />} />
+        <Route path="/login" element={<Login setAuthenticate={setAuthenticate} />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
       </Routes>
     </div>
   );

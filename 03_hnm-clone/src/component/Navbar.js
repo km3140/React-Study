@@ -45,13 +45,6 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
     }
   };
 
-  const search = (event) => {
-    if (event.key === 'Enter') {
-      const query = event.target.value;
-      navigate(`?q=${query}`);
-    }
-  };
-
   return (
     <div>
       <div className="login-area">{loginOut()}</div>
@@ -66,13 +59,13 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
       <div className="menu-area">
         <div></div>
         <ul className="menu-list">
-          {menuList.map((menu) => {
+          {menuList.map(menu => {
             return <li>{menu}</li>;
           })}
         </ul>
         <div className="search-box">
           <FontAwesomeIcon icon={faSearch} />
-          <input type="text" onKeyPress={(event) => search(event)} />
+          <input type="text" />
         </div>
       </div>
     </div>

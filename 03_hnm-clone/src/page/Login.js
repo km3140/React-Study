@@ -3,7 +3,7 @@ import { Form, Button, Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const Login = ({ setAuthenticate }) => {
-  const loginUser = (event) => {
+  const loginUser = event => {
     console.log('on submit');
     event.preventDefault();
     setAuthenticate(true);
@@ -12,7 +12,7 @@ const Login = ({ setAuthenticate }) => {
   return (
     <div style={{ height: 900 }}>
       <Container style={{ width: 500, marginTop: 70 }}>
-        <Form onSubmit={(event) => loginUser(event)}>
+        <Form onSubmit={event => loginUser(event)}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control type="email" placeholder="Enter email" />

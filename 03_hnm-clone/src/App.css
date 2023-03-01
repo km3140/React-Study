@@ -10,7 +10,7 @@
 .menu-list {
   display: flex;
   list-style-type: none;
-  gap: 15px;
+  gap: 20px;
   align-items: center;
   padding: 0px;
 }
@@ -20,17 +20,15 @@
   justify-content: space-between;
 }
 .menu-area div:first-child {
-  width: 150px;
+  width: 182.4px;
 }
 .search-box {
   border: none;
   border-bottom: 2px black solid;
   height: fit-content;
-  width: 150px;
 }
 .search-box input {
   border: none;
-  width: 134px;
 }
 .card-img:hover {
   transform: scale(1.05);
@@ -42,19 +40,4 @@
   display: flex;
   justify-content: flex-end;
   margin: 20px;
-}
-.product-img {
-  display: flex;
-  justify-content: flex-end;
-}
-.dropdown {
-  border: 1px black solid;
-  width: 120px;
-  border-radius: 7px;
-}
-.product-detail-button {
-  width: 100%;
-}
-.container div {
-  margin-bottom: 10px;
 }
