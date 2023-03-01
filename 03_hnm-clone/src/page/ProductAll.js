@@ -8,7 +8,7 @@ const ProductAll = ({ authenticate }) => {
 
   const [productList, setProductList] = useState([]);
   const getProducts = async () => {
-    const url = 'http://localhost:5000/products';
+    const url = 'http://localhost:3000/products';
     const response = await fetch(url);
     const data = await response.json();
     setProductList(data);
